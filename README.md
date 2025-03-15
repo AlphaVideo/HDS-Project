@@ -1,5 +1,9 @@
 # IBFT Consensus
 
+Project for the Highly Dependable Systems 2022/2023 course at Instituto Superior Técnico. Implements a distributed ledger utilizing Istanbul BFT Consensus algorithm in Java.
+
+## Usage
+
 Execute JUnit tests with `mvn clean test`
 
 This includes tests for:
