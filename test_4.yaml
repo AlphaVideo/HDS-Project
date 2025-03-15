@@ -1,0 +1,15 @@
+session_name: load-test
+windows:
+  - window_name: servers
+    layout: tiled
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="1"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="2"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="3"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="4"; exit
+  - window_name: client
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ClientMain" -Dexec.args="7011"; exit
+  - window_name: client
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ClientMain" -Dexec.args="7012"; exit

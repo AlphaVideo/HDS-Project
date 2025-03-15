@@ -1,0 +1,24 @@
+session_name: load-test
+windows:
+  - window_name: servers
+    layout: tiled
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="1 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="2 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="3 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="4 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="5 /processes2.csv"; exit
+  - window_name: servers
+    layout: tiled
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="6 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="7 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="8 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="9 /processes2.csv"; exit
+      - mvn exec:java -Dexec.mainClass="org.example.ServerMain" -Dexec.args="10 /processes2.csv"; exit
+  - window_name: client
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ClientMain" -Dexec.args="7011 /processes2.csv"; exit
+  - window_name: client
+    panes:
+      - mvn exec:java -Dexec.mainClass="org.example.ClientMain" -Dexec.args="7012 /processes2.csv"; exit
